@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 export const TodoForm = () => {
     const [value, setValue] = useState("")
     const handleSubmit = e =>{
-        
+        e.preventDefault();
     }
 
   return (
