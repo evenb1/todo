@@ -1,0 +1,30 @@
+/* src/components/AuthModal.css */
+* {
+    font-family: var(--font-family-poppins);
+  }
+.auth-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    background: rgb(144, 106, 169);
+    box-shadow: 5px 5px 5px rgba(11, 11, 11, 0.1);    padding: 20px;
+    border-radius: 10px;
+    outline: none;
+    width: 300px;
+  }
+  
+  .auth-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  h2{
+    text-align: center;
+  }
+  
