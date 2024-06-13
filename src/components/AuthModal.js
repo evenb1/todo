@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Modal from 'react-modal';
 import './AuthModal.css'; // Optional for custom styles
 import { FaUser } from 'react-icons/fa';
+import './SpotlightButton'
 
 Modal.setAppElement('#root'); // Ensure accessibility by binding modal to your app element
 
