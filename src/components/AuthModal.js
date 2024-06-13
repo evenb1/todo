@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import './AuthModal.css'; // Optional for custom styles
-import { FaUser } from "react-icons/fa";
+import { FaUser } from 'react-icons/fa';
 
 Modal.setAppElement('#root'); // Ensure accessibility by binding modal to your app element
 
@@ -34,23 +34,24 @@ const AuthModal = () => {
         <form>
           {!isLogin && (
             <div className="input-box">
-                <input type="text" name="username" />
+                <input type="text" name="username" placeholder='Username' />
+                <FaUser />
+
             </div>
           )}
           <div className="input-box">
             
               <input type="email" name="email" placeholder='Email'/>
           </div>
-          <div>
-            <label>
-              Password:
-              <input type="password" name="password" />
-            </label>
+          <div className='input-box'>
+              <input type="password" name="password" placeholder='Password'/>
+            
+          </div>
+          <div className='register-link'>
+              <p>Don't have an Account? <a href='#'>Register</a></p>
           </div>
           <button type="submit">{isLogin ? 'Login' : 'Sign Up'}</button>
-          <button type="button" onClick={closeModal}>
-            Close
-          </button>
+          
         </form>
       </Modal>
     </div>
