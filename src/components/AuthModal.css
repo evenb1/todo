@@ -16,11 +16,13 @@ body{
     right: auto;
     bottom: auto;
     transform: translate(-50%, -50%);
-    background: rgba(243, 238, 150, 0.837);
+    background: rgba(255, 255, 255, 0);
     box-shadow: 5px 5px 5px rgba(11, 11, 11, 0.1);    padding: 20px;
     border-radius: 10px;
     outline: none;
     width: 300px;
+    background-image: url("/src/blob\ .svg");
+
   }
   
   .auth-modal-overlay {
@@ -29,7 +31,7 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.376);
     
   }
   h2{
@@ -42,6 +44,8 @@ body{
     height:40px;
     margin-top: 10px;
     max-width: 240px;
+    margin-bottom: 10px;
+
   }
   .input-box input{
     width: 100%;
@@ -52,6 +56,20 @@ body{
     outline: none;
     font-size: 16px;
     border: 2px solid rgba(74, 74, 74, 0.2);
+    border-radius: 50px;
+  }
+  button{
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    max-width: 100px;
+    height: 40px;
     border-radius: 40px;
+    outline:none;
+    border:none;
+    font-size: 20px;
+  }
+  .register-link{
+    margin: 0 0 0 10px;
   }
   

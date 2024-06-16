@@ -2,8 +2,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import './AuthModal.css'; // Optional for custom styles
-import { FaUser } from 'react-icons/fa';
-import './SpotlightButton'
 
 Modal.setAppElement('#root'); // Ensure accessibility by binding modal to your app element
 
@@ -20,10 +18,14 @@ const AuthModal = () => {
     setModalIsOpen(false);
   };
 
+  const switchToSignUp = (e) => {
+    e.preventDefault();
+    setIsLogin(false);
+  };
+
   return (
     <div>
       <button onClick={() => openModal(true)}>Login</button>
-      <button onClick={() => openModal(false)}>Sign Up</button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -35,24 +37,21 @@ const AuthModal = () => {
         <form>
           {!isLogin && (
             <div className="input-box">
-                <input type="text" name="username" placeholder='Username' />
-                <FaUser />
-
+              <input type="text" name="username" placeholder='Username' />
             </div>
           )}
           <div className="input-box">
-            
-              <input type="email" name="email" placeholder='Email'/>
+            <input type="email" name="email" placeholder='Email' />
           </div>
           <div className='input-box'>
-              <input type="password" name="password" placeholder='Password'/>
-            
+            <input type="password" name="password" placeholder='Password' />
           </div>
-          <div className='register-link'>
-              <p>Don't have an Account? <a href='#'>Register</a></p>
-          </div>
+          {isLogin && (
+            <div className='register-link'>
+              <p>Don't have an Account? <a href='#' onClick={switchToSignUp}>Register</a></p>
+            </div>
+          )}
           <button type="submit">{isLogin ? 'Login' : 'Sign Up'}</button>
-          
         </form>
       </Modal>
     </div>
